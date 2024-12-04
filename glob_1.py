@@ -24,7 +24,6 @@ def get_blosum62():
  
 
 def global_alignment_score(v, w, scoring_matrix, sigma):
-    '''Return the global alignment score of v and w subject to the given scoring matrix and indel penalty sigma.'''
 
     S = [[0 for j in range(len(w) + 1)] for i in range(len(v) + 1)]
 
@@ -65,8 +64,6 @@ def read_fasta(file_path):
 if __name__ == '__main__':
     fasta_file_path = "rosalind_glob.txt" 
     sequences = read_fasta(fasta_file_path)
-    if len(sequences) < 2:
-        print("Error: The FASTA file must contain at least two sequences.")
         exit(1)
 
     s = sequences[0]
